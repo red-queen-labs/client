@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Webcam from 'react-webcam';
+import { Container } from '@material-ui/core';
 
 const PhotoView = () => {
   const [viewState, setViewState] = useState({
@@ -15,9 +16,13 @@ const PhotoView = () => {
   useEffect(() => {}, []);
 
   return (
-    <div id="camera">
-      <Webcam />
-    </div>
+    <Container id="camera">
+      <Container maxWidth="md">
+        <div style={{ padding: '0', border: '4px solid red' }}>
+          <Webcam />
+        </div>
+      </Container>
+    </Container>
   );
 };
 

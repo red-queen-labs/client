@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 
 import Home from './pages/Home';
-import Signup from './pages/Signup';
+import Signup from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import GoogleMap from './pages/GoogleMap';
 import PhotoView from './pages/PhotoView';
