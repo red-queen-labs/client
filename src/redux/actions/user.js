@@ -4,7 +4,10 @@ import {
   CREATE_USER_FAIL,
   SIGN_USER_IN_SUCCESS,
   SIGN_USER_IN_FAIL,
+  CREATE_PROFILE_FAIL,
+  CREATE_PROFILE_SUCCESS,
 } from '../actionTypes';
+import md5 from 'md5'
 
 const config = {
   headers: {
@@ -24,48 +27,50 @@ export const userSignup = formData => async dispatch => {
   });
 
   try {
-    const res = axios.post('/api/______', body, config);
-
+	  const res = await axios.post('/api/users/register', body, config);	  
     dispatch({
       type: CREATE_USER_SUCCESS,
-      payload: res.data,
-    });
+      payload: res,
+	});
+	  
+	const res2 = await axios.post('/api/profiles/register', body, config);
+	dispatch({
+		type: CREATE_PROFILE_SUCCESS,
+		payload: res2
+	});
   } catch (error) {
-    dispatch({
-      type: CREATE_USER_FAIL,
-      payload: error,
-    });
+	  dispatch({
+		type: CREATE_USER_FAIL,
+		payload: error
+	  });
+	  dispatch({
+		  type: CREATE_PROFILE_FAIL,
+		  payload: error
+	  })
   }
 };
 
-export const userLogin = async data => dispatch => {
+export const userLogin = data => async dispatch => {
   const { email, password } = data;
 
-  dispatch({
-    type: SIGN_USER_IN_SUCCESS,
-    payload: {
-      email,
-      password,
-    },
-  });
+	const password_hash = md5(password);
+	const body = JSON.stringify({
+		email,
+		password_hash
+	});
 
-  // try {
-  //   const res = await axios.post();
+  try {
+    const res = await axios.post('/api/users/login', body, config);
 
-  //   return {
-  //     type: SIGN_USER_IN_SUCCESS,
-  //     payload: {
-  //       id: res.id,
-  //       email: res.email,
-  //       password: res.password,
-  //     },
-  //   };
-  // } catch (error) {
-  //   return {
-  //     type: SIGN_USER_IN_FAIL,
-  //     payload: {
-  //       error,
-  //     },
-  //   };
-  // }
+    dispatch({
+			type: SIGN_USER_IN_SUCCESS,
+			payload: res,
+		});
+
+  } catch (error) {
+    dispatch({
+			type: SIGN_USER_IN_FAIL,
+			payload: error,
+		});
+  }
 };

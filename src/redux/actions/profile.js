@@ -1,20 +1,32 @@
 import {
-  CREATE_PROFILE_SUCCESS,
-  CREATE_PROFILE_FAIL,
   EDIT_PROFILE_SUCCESS,
   EDIT_PROFILE_FAIL,
 } from '../actionTypes';
+import axios from 'axios';
 
 // change to SIGN_UP
 // and hash w/ md5
 
-export const userLogin = data => {
+export const profileEdit = data => async dispatcher => {
   // ...
-  // side effect login logic
+	// side effect login logic
 
-  return {
-    id,
-    email,
-    password,
-  };
+	const { changes } = data;
+	const body = JSON.stringify({
+		changes
+	});
+	
+	try {
+		const res = await axios.put('/api/profiles/edit', body, config);
+
+		dispatcher({
+			type: EDIT_PROFILE_SUCCESS,
+			payload: res
+		});
+	} catch (error) {
+		dispatcher({
+			type: EDIT_PROFILE_FAIL,
+			payload: error
+		});
+	}
 };
