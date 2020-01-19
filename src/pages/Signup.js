@@ -92,9 +92,9 @@ const SignUp = ({ userSignup }) => {
         <Button
           type="submit"
           variant="contained"
-          size="large"
+          size="med"
           color="secondary"
-          fullWidth={true}
+          fullWidth={false}
         >
           Sign Up
         </Button>

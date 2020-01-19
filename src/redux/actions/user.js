@@ -25,11 +25,17 @@ export const userSignup = formData => async dispatch => {
 
   try {
     const res = axios.post('/api/______', body, config);
+
     dispatch({
       type: CREATE_USER_SUCCESS,
-      payload: formData,
+      payload: res.data,
     });
-  } catch (error) {}
+  } catch (error) {
+    dispatch({
+      type: CREATE_USER_FAIL,
+      payload: error,
+    });
+  }
 };
 
 export const userLogin = async data => dispatch => {

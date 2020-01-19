@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Signup from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import GoogleMap from './pages/GoogleMap';
+import PhotoView from './pages/PhotoView';
 import Layout from './components/Layout';
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/signin" component={SignIn} />
             <Route exact path="/googleMap" component={GoogleMap} />
+            <Route exact path="/photoView" component={PhotoView} />
             <Route path="/" component={Home} />
           </Switch>
         </Layout>

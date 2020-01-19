@@ -26,6 +26,3 @@ const mapState = state => ({
 });
 
 export default connect(mapState, { triggerAlert })(Home);
-
-// AFFORDABILITY METER
-// SIMULATE A SEARCH REQUEST

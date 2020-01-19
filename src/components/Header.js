@@ -10,12 +10,13 @@ import {
   MenuItem,
   Menu,
 } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import CameraAltIcon from '@material-ui/icons/CameraAlt';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -134,9 +135,7 @@ const Header = ({ toggleSidebar }) => {
     >
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon />
-          </Badge>
+          <CameraAltIcon />
         </IconButton>
         <p>Messages</p>
       </MenuItem>
@@ -184,11 +183,11 @@ const Header = ({ toggleSidebar }) => {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <MailIcon />
-              </Badge>
-            </IconButton>
+            <Link to="/photoView" style={{ color: 'white' }}>
+              <IconButton aria-label="show 4 new mails" color="inherit">
+                <CameraAltIcon />
+              </IconButton>
+            </Link>
             <IconButton aria-label="show 17 new notifications" color="inherit">
               <Badge badgeContent={17} color="secondary">
                 <NotificationsIcon />
