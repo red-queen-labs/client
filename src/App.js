@@ -4,9 +4,9 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 
 import Home from './pages/Home';
-// import Signup from './pages/SignUp';
-import SignIn from './pages/SignIn';
-import GoogleMap from './pages/GoogleMap';
+import Signup from './pages/SignUp';
+// import SignIn from './pages/SignIn';
+// import GoogleMap from './pages/GoogleMap';
 import PhotoView from './pages/PhotoView';
 import Layout from './components/Layout';
 
@@ -16,8 +16,8 @@ const App = () => {
       <Router>
         <Layout>
           <Switch>
-            {/* <Route exact path="/signup" component={Signup} /> */}
-            <Route exact path="/signin" component={SignIn} />
+            <Route exact path="/trigger" component={Signup} />
+            {/* <Route exact path="/signin" component={SignIn} /> */}
             {/* <Route exact path="/googleMap" component={GoogleMap} /> */}
             <Route exact path="/photoView" component={PhotoView} />
             <Route exact path="/" component={Home} />

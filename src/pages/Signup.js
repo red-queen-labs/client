@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
-import { Container, TextField, Button } from '@material-ui/core';
-import { userSignup } from '../redux/actions/user';
+import { Container, TextField, Button, Typography } from '@material-ui/core';
+import axios from 'axios';
 
-const SignUp = ({ userSignup }) => {
+const IndexInit = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password1: '',
-    password2: '',
+    textString: '',
   });
-  const { firstName, lastName, email, password1, password2 } = formData;
+  const [getRes, setGetRes] = useState(null);
+  const { textString } = formData;
 
   const onChange = e => {
     const { name, value } = e.target;
@@ -21,86 +17,41 @@ const SignUp = ({ userSignup }) => {
 
   const submitFormData = e => {
     e.preventDefault();
-    userSignup(formData);
+    const res = axios.post('http://localhost:5000/');
+    setGetRes(res);
   };
 
   return (
-    <Container maxWidth="md">
-      <h1>Sign Up</h1>
+    <Container maxWidth="md" style={{ marginTop: '120px' }}>
+      <Typography>Trigger Pipeline</Typography>
       <form onSubmit={e => submitFormData(e)}>
         <TextField
           fullWidth={true}
           variant="outlined"
-          id="firstName"
-          name="firstName"
-          label="First Name"
+          id="textString"
+          name="textString"
+          label="Address"
           margin="normal"
-          placeholder="First Name"
+          placeholder="Address"
           type="text"
-          value={firstName}
-          onChange={e => onChange(e)}
-        />
-        <TextField
-          fullWidth={true}
-          variant="outlined"
-          id="lastName"
-          name="lastName"
-          label="Last Name"
-          margin="normal"
-          placeholder="Last Name"
-          type="text"
-          value={lastName}
+          value={textString}
           onChange={e => onChange(e)}
         />
 
-        <TextField
-          fullWidth={true}
-          variant="outlined"
-          id="email"
-          name="email"
-          label="Email"
-          margin="normal"
-          placeholder="Email"
-          type="email"
-          value={email}
-          onChange={e => onChange(e)}
-        />
-        <TextField
-          fullWidth={true}
-          variant="outlined"
-          id="password1"
-          name="password1"
-          label="Password"
-          margin="normal"
-          placeholder="Password"
-          type="password"
-          value={password1}
-          onChange={e => onChange(e)}
-        />
-        <TextField
-          fullWidth={true}
-          variant="outlined"
-          id="password2"
-          name="password2"
-          label="Confirm Password"
-          margin="normal"
-          placeholder="Confirm Password"
-          type="password"
-          value={password2}
-          onChange={e => onChange(e)}
-        />
         <Button
           type="submit"
           variant="contained"
-          size="med"
+          size="large"
           color="secondary"
           fullWidth={false}
         >
-          Sign Up
+          Send
         </Button>
       </form>
+
+      {getRes && <div>{setGetRes}</div>}
     </Container>
   );
 };
 
-export default connect(null, { userSignup })(SignUp);
+export default IndexInit;
