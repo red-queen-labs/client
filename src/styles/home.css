@@ -1,0 +1,42 @@
+#homeViewContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+}
+
+.googleMap {
+  position: relative;
+  top: -30px;
+  left: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.listingsWrapper {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.listingCard {
+  margin: 25px auto;
+}
+
+.address {
+  text-align: center;
+}
+
+.cardActionArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100%;
+}
+
+.cardMedia {
+  flex-shrink: 1;
+}

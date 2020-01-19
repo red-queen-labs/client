@@ -18,9 +18,9 @@ const App = () => {
           <Switch>
             {/* <Route exact path="/signup" component={Signup} /> */}
             <Route exact path="/signin" component={SignIn} />
-            <Route exact path="/googleMap" component={GoogleMap} />
+            {/* <Route exact path="/googleMap" component={GoogleMap} /> */}
             <Route exact path="/photoView" component={PhotoView} />
-            <Route path="/" component={Home} />
+            <Route exact path="/" component={Home} />
           </Switch>
         </Layout>
       </Router>

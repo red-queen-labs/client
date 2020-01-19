@@ -1,0 +1,80 @@
+[
+  {
+    "address": "363 Western Dr, Santa Cruz, CA 95060",
+    "description": "The Hilltop Santa Cruz offers 1 and 2 bedroom apartments in the center of all things that make Santa Cruz unique and lovable. With tons of great amenities and a great selection of floor plans to choose from, you'll love calling us home. You can focus on your studies, enjoy one of our awesome resident events, or cheer on the Slugs while we take care of the details. ",
+    "website": "http://www.liveatthehilltop.com",
+    "photos": [
+      "http://www.liveatthehilltop.com/-/media/Hilltop/Photos/Models/HiRes_Hilltop_2019-05_04.jpg?h=3000&mh=921&mw=1382&thn=0&w=4500&crop=1&hash=79A59239F888EC637B689E51CACA84228B36ACDD",
+      "http://www.liveatthehilltop.com/-/media/Hilltop/Photos/Models/HiRes_Hilltop_2019-05_44.jpg?h=3000&mh=921&mw=1382&thn=0&w=4500&crop=1&hash=E620C6D045CBB1B05EC2B6CF79DB952858DCE9BF"
+    ],
+    "amenities": "onsite laundry\noutdoor pool\ncommunity lounge\ncovered parking",
+    "units": [
+      {
+        "apn": "1000",
+        "roomNum": 409,
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "sqrFt": 630,
+        "rent": 1940
+      },
+      {
+        "apn": "2000",
+        "roomNum": 312,
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "sqrFt": 714,
+        "rent": 2150
+      }
+    ]
+  },
+  {
+    "address": "555 Pacific Ave, Santa Cruz, CA 95060",
+    "description": "Five55 is a brand new beachside apartment community offering luxury living in the heart of Santa Cruz. We offer a collection of well-designed residences sure to please even those with the most discriminating tastes. Whether you want to host a dinner party at the outdoor kitchen and pizza ovens, catch a sunset from the rooftop deck or walk into downtown or along the beach, Five55 is the perfect location for you!",
+    "website": "https://www.five55santacruz.com",
+    "photos": [
+      "https://capi.myleasestar.com/v2/dimg/60029190/1771x1481/60029190.jpg",
+      "https://capi.myleasestar.com/v2/dimg/59331887/1771x1481/59331887.jpg",
+      "https://capi.myleasestar.com/v2/dimg/59331886/1771x1481/59331886.jpg"
+    ],
+    "amenities": "community lounge\npet friendly\nin-unit laundry\nbuilding garage",
+    "units": [
+      {
+        "apn": "3000",
+        "roomNum": 201,
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "sqrFt": 452,
+        "rent": 1290
+      },
+      {
+        "apn": "4000",
+        "roomNum": 220,
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "sqrFt": 756,
+        "rent": 2435
+      }
+    ]
+  },
+  {
+    "address": "143 Chestnut St, Santa Cruz, CA 95060",
+    "description": "Experience the essence of Santa Cruz living at Chestnut Street apartments in Santa Cruz, CA.",
+    "website": "https://www.essexapartmenthomes.com/en/apartments/chestnut-street",
+    "photos": [
+      "https://ssl.c.photoshelter.com/img-get2/I0000wjotOgePPSU/sec=wdfsdfoeflwefms1440ed20200122mU9QrJiLmCdkGW7/fill=1680x945/02-Chestnut-Street-Apartment-Homes-Pet-Friendly-Santa-Cruz.jpg/fill=713x476",
+      "https://ssl.c.photoshelter.com/img-get2/I0000WjbCTloo1xM/sec=wdfsdfoeflwefms1440ed20200122NtmnYzQF7GX3E7z/fill=1680x945/03-Chestnut-Street-Apartment-Homes-BBQ-Area-Santa-Cruz.jpg/fill=713x476",
+      "https://ssl.c.photoshelter.com/img-get2/I0000TD1jqpIMIyY/sec=wdfsdfoeflwefms1440ed20200122JOhacSuvmfPnA0D/fill=1680x945/04-Chestnut-Street-Apartment-Homes-BBQ-Area-Santa-Cruz.jpg/fill=713x476"
+    ],
+    "amenities": "BBQ area\ndog park\npet friendly",
+    "units": [
+      {
+        "apn": "3000",
+        "roomNum": 108,
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "sqrFt": 812,
+        "rent": 2345
+      }
+    ]
+  }
+]

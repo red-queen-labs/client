@@ -6,7 +6,7 @@ import SnackBar from './Alert';
 
 const Layout = ({ alerts, children }) => {
   return (
-    <div id="layout">
+    <div id="layout" style={{ overflowX: 'noScroll' }}>
       <SEO title="React-from-scatch Starter!!!!!!!" />
       <Header />
 
