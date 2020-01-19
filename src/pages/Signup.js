@@ -17,7 +17,9 @@ const IndexInit = () => {
 
   const submitFormData = e => {
     e.preventDefault();
-    const res = axios.post('http://localhost:5000/');
+    const res = axios.post('http://localhost:5000/', {
+      body: formData.textString,
+    });
     setGetRes(res);
   };
 
