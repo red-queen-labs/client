@@ -1,22 +1,13 @@
 import React from 'react';
 import HomeListingCard from './HomeLIstingCard';
-import {
-  Container,
-  Grid,
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Button,
-  Typography,
-  Paper,
-} from '@material-ui/core';
+import { Container, Typography } from '@material-ui/core';
 
 const HomeListings = ({ data }) => {
   return (
     <Container className="listingsWrapper" maxWidth="md">
-      <Typography variant="h5">Recently Indexed Listings</Typography>
+      <Typography variant="h4" style={{ margin: '25px 0' }}>
+        Recently Indexed Listings
+      </Typography>
 
       <div className="listingsContainer">
         {data.map(b => {

@@ -19,6 +19,7 @@
   flex-direction: column;
   overflow-y: scroll;
   height: 100vh;
+  margin-bottom: 100px;
 }
 
 .listingCard {
