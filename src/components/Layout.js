@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import SEO from './SEO';
 import Header from './Header';
-import SideBar from './SideBar';
 import SnackBar from './Alert';
 
 const Layout = ({ alerts, children }) => {
-  const [sideBarIsOpen, toggleSidebar] = useState();
-
   return (
     <div id="layout">
       <SEO title="React-from-scatch Starter!!!!!!!" />
-      <Header toggleSidebar={toggleSidebar} />
-      <SideBar isOpen={sideBarIsOpen} />
+      <Header />
+
       {alerts.map((alert, i) => (
         <SnackBar key={i} msg={alert.msg} type={alert.alertType} />
       ))}

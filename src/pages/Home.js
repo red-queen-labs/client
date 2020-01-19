@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Layout from '../components/Layout';
 import { connect } from 'react-redux';
 import { triggerAlert } from '../redux/actions/alert';
 
@@ -7,7 +6,7 @@ import { Button } from '@material-ui/core';
 
 const Home = ({ alerts, triggerAlert }) => {
   return (
-    <Layout>
+    <div>
       <Button
         variant="contained"
         color="primary"
@@ -18,7 +17,7 @@ const Home = ({ alerts, triggerAlert }) => {
       >
         Dispatch Set Alert
       </Button>
-    </Layout>
+    </div>
   );
 };
 

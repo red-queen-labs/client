@@ -4,7 +4,9 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 
 import Home from './pages/Home';
-import Signup from './pages/Signup';
+import Signup from './pages/SignUp';
+import SignIn from './pages/SignIn';
+import GoogleMap from './pages/GoogleMap';
 import Layout from './components/Layout';
 
 const App = () => {
@@ -14,6 +16,8 @@ const App = () => {
         <Layout>
           <Switch>
             <Route exact path="/signup" component={Signup} />
+            <Route exact path="/signin" component={SignIn} />
+            <Route exact path="/googleMap" component={GoogleMap} />
             <Route path="/" component={Home} />
           </Switch>
         </Layout>
